@@ -39,7 +39,13 @@ public class Main {
                 System.out.println("Дубликаты файлов не найдены");
             }
             System.out.println("Очистим всего: " + fileSize + "Mb");
-
+            List<String> deleteFiles = new ArrayList<>();
+            for(List<String> list: fileDuplicate.values()){
+                for (int i = 1; i < list.size() ; i++) {
+                    deleteFiles.add(list.get(i));
+                }
+            }
+            System.out.println("Для удаления :"+deleteFiles.size()+" файлов");
 
 
         }
